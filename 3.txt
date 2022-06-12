@@ -1,0 +1,19 @@
+docker pull postgres
+
+docker run --name tataeva-postgres -e POSTGRES_PASSWORD=1234 -d postgres
+
+docker exec -it tataeva-postgres bash
+
+winpty docker exec -it tataeva-postgres bash
+
+createdb tataeva_db -U postgres
+
+createuser tataeva_user -U postgres
+
+psql tataeva_db -h localhost -U tataeva_user
+
+\q
+
+docker stop tataeva-postgres
+
+docker rm tataeva-postgres

@@ -1,0 +1,12 @@
+sudo groupadd UP211_Tataeva
+
+sudo useradd tataeva_anna -d /home/tataeva_anna -s /bin/bash -g UP211_Tataeva
+sudo useradd tataeva_ubuntu -d /home/tataeva_anna -s /bin/bash -g UP211_Tataeva
+
+sudo su tataeva_ubuntu
+
+exit
+
+sudo userdel tataeva_ubuntu
+
+sudo groupdel UP211_Tataeva

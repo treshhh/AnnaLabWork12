@@ -1,0 +1,25 @@
+sudo mkdir tataeva_root
+cd tataeva_root
+
+which bash 
+sudo mkdir ./bin
+sudo cp /bin/bash ./bin
+ldd /bin/bash
+sudo mkdir ./lib
+sudo mkdir ./lib/x86_64-linux-gnu
+sudo cp /lib/x86_64-linux-gnu/libtinfo.so.5 ./lib/x86_64-linux-gnu
+sudo cp /lib/x86_64-linux-gnu/libdl.so.2 ./lib/x86_64-linux-gnu
+sudo cp /lib/x86_64-linux-gnu/libc.so.6 ./lib/x86_64-linux-gnu
+sudo mkdir ./lib64
+sudo cp /lib64/ld-linux-x86-64.so.2 ./lib64
+sudo chroot . 
+
+pwd
+
+ls
+
+exit 
+
+pwd
+
+ls
